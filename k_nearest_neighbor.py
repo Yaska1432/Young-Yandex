@@ -126,8 +126,8 @@ class KNearestNeighbor:
         #########################################################################
         # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         dists = np.sqrt((X ** 2).sum(axis=1)[:, np.newaxis] +\
-                (X_train ** 2).sum(axis=1) -\
-                2 * np.dot(X, X_train.T))
+                (self.X_train ** 2).sum(axis=1) -\
+                2 * np.dot(X, self.X_train.T))
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         return dists
 
